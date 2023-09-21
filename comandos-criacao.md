@@ -13,7 +13,7 @@ CREATE DATABASE vendas CHARACTER SET utf8mb4;
 
 ```sql
 
-CREATE TABLE fabricantes(
+CREATE TABLE filmes(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(45) NOT NULL
 )
@@ -25,13 +25,12 @@ CREATE TABLE fabricantes(
 
 ```sql
 
-CREATE TABLE produtos(
+CREATE TABLE filmes(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(45) NOT NULL,
-    descricao TEXT(1000) NOT NULL,
-    preco DECIMAL(6,2) NOT NULL,
-    quantidade TINYINT (4) NOT NULL
-
+    titulo VARCHAR(45) NOT NULL,
+    lancamento DATE(4) NOT NULL,
+    genero INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+   
 )
 
 ```
