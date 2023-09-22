@@ -12,9 +12,9 @@ CREATE DATABASE filmes CHARACTER SET utf8mb4;
  # Criar tabela fabricante
 
 ```sql
-CREATE TABLE fabricantes(
+CREATE TABLE generos(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(45) NOT NULL
+    generos VARCHAR(45) NOT NULL
 );
 ```
 
@@ -32,15 +32,7 @@ CREATE TABLE filmes(
 );
 
 ```
-<!-- __________________________________________________ -->
 
-# Adicionar campo/coluna em uma tabela
-
-```sql
-ALTER TABLE produtos ADD fabricante_id INT NOT NULL
-AFTER quantidade;
-
-```
 <!-- __________________________________________________ -->
 
 # Criação da chave estrangeira (relacionamento entre as tabelas)
@@ -52,10 +44,3 @@ ALTER TABLE
     FOREIGN KEY (genero_id) REFERENCES generos(id)
 ```
 
-<!-- __________________________________________________ -->
-
-# Apagar uma tabela
-
-```sql
-DROP TABLE fabricantes;
-```
